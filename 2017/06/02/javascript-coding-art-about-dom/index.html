@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -87,18 +87,25 @@
 
 
 
-<meta name="description" content="在学习jQuery时，用到了选择器来找到元素，运用方法。所有jQuery方法都是由$开始的，通常称作为 美元符号，或者简称为bling.    $(document).ready(function() {方法放置处});jQuery通过选择器来选择一个元素的，然后操作元素做些改变；包括元素，类，id选择器。">
+<meta name="description" content="javascript在(x)HTML中的引入两种方式：
+
+&amp;lt;script&amp;gt;javascript code&amp;lt;/script&amp;gt;将&amp;lt; script &amp;gt;标签放到&amp;lt; head &amp;gt;之间。
+&amp;lt;script src=&amp;quot;file.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;将javascript代码存入扩展名为.js的独立文件，再在&amp;lt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="freecodecamp-notes-3">
-<meta property="og:url" content="http://yoursite.com/2017/03/24/freecodecamp-notes-3/index.html">
+<meta property="og:title" content="javascript DOM 编程艺术笔记1">
+<meta property="og:url" content="http://yoursite.com/2017/06/02/javascript-coding-art-about-dom/index.html">
 <meta property="og:site_name" content="blog of lsdm">
-<meta property="og:description" content="在学习jQuery时，用到了选择器来找到元素，运用方法。所有jQuery方法都是由$开始的，通常称作为 美元符号，或者简称为bling.    $(document).ready(function() {方法放置处});jQuery通过选择器来选择一个元素的，然后操作元素做些改变；包括元素，类，id选择器。">
-<meta property="og:image" content="http://p1.bpimg.com/4851/fb02cea296608e95.jpg">
-<meta property="og:updated_time" content="2017-03-24T12:22:34.619Z">
+<meta property="og:description" content="javascript在(x)HTML中的引入两种方式：
+
+&amp;lt;script&amp;gt;javascript code&amp;lt;/script&amp;gt;将&amp;lt; script &amp;gt;标签放到&amp;lt; head &amp;gt;之间。
+&amp;lt;script src=&amp;quot;file.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;将javascript代码存入扩展名为.js的独立文件，再在&amp;lt;">
+<meta property="og:updated_time" content="2017-06-02T12:15:07.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="freecodecamp-notes-3">
-<meta name="twitter:description" content="在学习jQuery时，用到了选择器来找到元素，运用方法。所有jQuery方法都是由$开始的，通常称作为 美元符号，或者简称为bling.    $(document).ready(function() {方法放置处});jQuery通过选择器来选择一个元素的，然后操作元素做些改变；包括元素，类，id选择器。">
-<meta name="twitter:image" content="http://p1.bpimg.com/4851/fb02cea296608e95.jpg">
+<meta name="twitter:title" content="javascript DOM 编程艺术笔记1">
+<meta name="twitter:description" content="javascript在(x)HTML中的引入两种方式：
+
+&amp;lt;script&amp;gt;javascript code&amp;lt;/script&amp;gt;将&amp;lt; script &amp;gt;标签放到&amp;lt; head &amp;gt;之间。
+&amp;lt;script src=&amp;quot;file.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;将javascript代码存入扩展名为.js的独立文件，再在&amp;lt;">
 
 
 
@@ -126,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/24/freecodecamp-notes-3/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/02/javascript-coding-art-about-dom/"/>
 
 
 
 
 
-  <title> freecodecamp-notes-3 | blog of lsdm </title>
+  <title> javascript DOM 编程艺术笔记1 | blog of lsdm </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +278,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/freecodecamp-notes-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/02/javascript-coding-art-about-dom/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="star Huang">
@@ -292,7 +299,7 @@
             
             
               
-                freecodecamp-notes-3
+                javascript DOM 编程艺术笔记1
               
             
           </h1>
@@ -307,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T20:20:44+08:00">
-                2017-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-02T16:14:05+08:00">
+                2017-06-02
               </time>
             
 
@@ -343,9 +350,45 @@
       
 
       
-        <p>在学习jQuery时，用到了选择器来找到元素，运用方法。<br><br>所有jQuery方法都是由$开始的，通常称作为 美元符号，或者简称为bling.<br><br>    $(document).ready(function() {方法放置处});<br>jQuery通过选择器来选择一个元素的，然后操作元素做些改变；包括元素，类，id选择器。<br><br><a id="more"></a><br>用jQuery的.addClass()方法，就可以给元素加class；也可以通过jQueryremoveClass()方法去掉元素上的class。<br><br>jQuery有一个叫做.css(“属性”,”值”)的方法能让你改变元素的CSS样式。<br>jQuery有一个.prop(“属性”,值)的方法让你来调整元素的属性。<br><br>jQuery的.html()方法可以添加HTML标签和文字到元素，而元素之前的内容都会被方法的内容所替换掉;jQuery 还有一个类似的方法叫.text()，它只能改变文本但不能修改标记。<br><br>jQuery有一个appendTo()方法可以把选中的元素加到其他元素中。<br>jQuery的clone()方法可以拷贝元素。<br>两个jQuery方法合在一起使用就叫方法链function chaining，这样使用起来很方便；例：<br>    $(“#target5”).clone().appendTo(“#left-well”)。<br>jQuery有一个方法叫parent()，它允许你访问指定元素的父元素；jQuery有一个方法叫children()，它允许你访问指定元素的子元素。<br>不能使用ID选择器时，jQuery允许用CSS选择器来选取元素，target:nth-child(n) CSS选择器允许你按照索引顺序(从1开始)选择目标元素的所有子元素。<br><br>让整个body都有淡出效果(fadeOut)： $(“body”).addClass(“animated fadeOut”);</p>
-<p>#其他<br>jquery确实强大，很多变化都可以在短代码内完成，只需要得到元素的ID即可。</p>
-<p>[小黄人专属]<img src="http://p1.bpimg.com/4851/fb02cea296608e95.jpg"></p>
+        <h2 id="javascript在-x-HTML中的引入"><a href="#javascript在-x-HTML中的引入" class="headerlink" title="javascript在(x)HTML中的引入"></a>javascript在(x)HTML中的引入</h2><p>两种方式：</p>
+<ol>
+<li><code>&lt;script&gt;javascript code&lt;/script&gt;</code>将&lt; script &gt;标签放到&lt; head &gt;之间。</li>
+<li><code>&lt;script src=&quot;file.js&quot;&gt;&lt;/script&gt;</code>将javascript代码存入扩展名为.js的独立文件，再在&lt; script &gt;中通过src属性指向该文件；<strong>最好是将script标签放到HTML文档最后,&lt; /body &gt;标签之前，有利于提高页面加载速度。</strong><a id="more"></a>
+</li>
+</ol>
+<h2 id="对象object"><a href="#对象object" class="headerlink" title="对象object"></a>对象object</h2><p>定义：由一些属性和方法组合在一起而构成的一个数据实体。</p>
+<p>属性是隶属于某个特定对象的变量；方法是只有某个特定对象才能调用的函数。</p>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>定义：全称为文档（document）对象（object）模型（model）；它是一种应用程序接口（API）;它将HTML文档表示为DOM树，清晰地表示了文档的结构组成。</p>
+<h3 id="节点（node）分类："><a href="#节点（node）分类：" class="headerlink" title="节点（node）分类："></a>节点（node）分类：</h3><ol>
+<li>元素节点：如&lt; p &gt;,&lt; span &gt;等元素。</li>
+<li>文本节点：如包含在&lt; p &gt;标签里的”text node”；并非所有元素都有文本节点。</li>
+<li>属性节点：用于对元素做出更具体的描述；<strong>特别是在css那些事中提到的class，ID等属性，经常被用到</strong>。</li>
+</ol>
+<h3 id="DOM中获取元素的方法"><a href="#DOM中获取元素的方法" class="headerlink" title="DOM中获取元素的方法"></a>DOM中获取元素的方法</h3><ol>
+<li><code>document.getElementById(&quot;id&quot;)</code>返回有特定id值的<strong>元素</strong>。</li>
+<li><code>document.getElementsByTagName(&quot;tag&quot;)</code>返回包含所有标签名为tag的<strong>元素数组</strong>。</li>
+<li><code>document.getElementsByClassName(&quot;class&quot;)</code>返回包含所有类名为class的<strong>元素数组</strong>。<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4></li>
+</ol>
+<ul>
+<li>一般获取到元素或元素数组后会将其赋值给变量，以方便操作使用。</li>
+<li>对于通过类名获取而言,存在新老浏览器兼容问题,可用以下代码解决。<br><code>function getElementsByClassName(node，classname){
+if（node.getElementsByClassName）{
+//使用现有方法
+return node.getElementsByClassName(classname);
+}else{
+var results = new Array();
+var elems = node.getElementsByTagName(&quot;*&quot;);
+for (var i=0;i&lt;elems.length;i++){
+ if (elems[i].className.indexOf(classname)!=-1){
+ results[results.length] = elems[i];
+ }
+}
+return results;
+}
+}</code><h3 id="获取和设置属性"><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h3></li>
+<li><code>object.getAttribute(attribute)</code><br>该方法不属于document对象，所以不能通过document对象调用，只能通过元素节点对象调用；它可以和上述节点对象获取方法合用。</li>
+<li><code>object.setAttribute(attribute，value)</code><br>该方法允许对属性节点做出修改。与get~一样，它也只能用于元素节点。</li>
+</ul>
 
       
     </div>
@@ -380,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag"># blog</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -393,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/24/freecodecamp-notes-2/" rel="next" title="freecodecamp-notes-2">
-                <i class="fa fa-chevron-left"></i> freecodecamp-notes-2
+              <a href="/2017/06/02/markdown-and-hexo/" rel="next" title="hexo文章创建与发布">
+                <i class="fa fa-chevron-left"></i> hexo文章创建与发布
               </a>
             
           </div>
@@ -402,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/01/selector/" rel="prev" title="css那些事儿">
-                css那些事儿 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -452,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://p1.bqimg.com/4851/04ae3b5adaa2608e.jpg"
@@ -544,6 +592,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript在-x-HTML中的引入"><span class="nav-number">1.</span> <span class="nav-text">javascript在(x)HTML中的引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象object"><span class="nav-number">2.</span> <span class="nav-text">对象object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">3.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#节点（node）分类："><span class="nav-number">3.1.</span> <span class="nav-text">节点（node）分类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM中获取元素的方法"><span class="nav-number">3.2.</span> <span class="nav-text">DOM中获取元素的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注释"><span class="nav-number">3.2.1.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取和设置属性"><span class="nav-number">3.3.</span> <span class="nav-text">获取和设置属性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
