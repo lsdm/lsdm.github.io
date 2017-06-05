@@ -1,0 +1,780 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="第六章结构化程序设计备忘结构化程序设计有一个原则：函数只应该有一个入口和一个出口。而在对象检测时很可能会违背这一原则；作者认为一个函数如果有多个出口，只要这些出口集中出现在函数开头部分（多个if语句并列；而非一层判断嵌套一层判断），就是可以接受的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript DOM编程艺术4">
+<meta property="og:url" content="http://yoursite.com/2017/06/05/javascript-dom-art4/index.html">
+<meta property="og:site_name" content="blog of lsdm">
+<meta property="og:description" content="第六章结构化程序设计备忘结构化程序设计有一个原则：函数只应该有一个入口和一个出口。而在对象检测时很可能会违背这一原则；作者认为一个函数如果有多个出口，只要这些出口集中出现在函数开头部分（多个if语句并列；而非一层判断嵌套一层判断），就是可以接受的。">
+<meta property="og:updated_time" content="2017-06-05T14:05:49.764Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript DOM编程艺术4">
+<meta name="twitter:description" content="第六章结构化程序设计备忘结构化程序设计有一个原则：函数只应该有一个入口和一个出口。而在对象检测时很可能会违背这一原则；作者认为一个函数如果有多个出口，只要这些出口集中出现在函数开头部分（多个if语句并列；而非一层判断嵌套一层判断），就是可以接受的。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/05/javascript-dom-art4/"/>
+
+
+
+
+
+  <title> javascript DOM编程艺术4 | blog of lsdm </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog of lsdm</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/javascript-dom-art4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="star Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p1.bqimg.com/4851/04ae3b5adaa2608e.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog of lsdm">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript DOM编程艺术4
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T19:37:29+08:00">
+                2017-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><h3 id="结构化程序设计备忘"><a href="#结构化程序设计备忘" class="headerlink" title="结构化程序设计备忘"></a>结构化程序设计备忘</h3><p>结构化程序设计有一个原则：函数只应该有一个入口和一个出口。<br>而在<strong>对象检测</strong>时很可能会违背这一原则；作者认为一个函数如果有多个出口，只要这些出口集中出现在函数开头部分（多个if语句并列；而非一层判断嵌套一层判断），就是可以接受的。<br><a id="more"></a></p>
+<h3 id="共享onload事件"><a href="#共享onload事件" class="headerlink" title="共享onload事件"></a>共享onload事件</h3><p>将两个函数逐一绑定到onload事件上，只有最后的那个才会被实际执行。解决方法是：编写并使用addLoadEvent脚本。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在自己编写的函数里，不应该做太多的假设，也就是要对假设能使用的方法做出判断。</p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>有时候if判断可以使用三元操作符来代替；它比较简短但逻辑不如if清晰。</p>
+<h4 id="键盘访问"><a href="#键盘访问" class="headerlink" title="键盘访问"></a>键盘访问</h4><p>视力残疾人无法看清鼠标指针，更喜欢使用键盘访问；针对键盘访问，可以使用node.onKeyPress事件。</p>
+<h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h5><p>该事件处理函数很容易出问题，按下任意一个按键都会触发它，因此应该（在onclick满足需要时）尽量避免使用它。</p>
+<h2 id="第七章（动态创建标记）"><a href="#第七章（动态创建标记）" class="headerlink" title="第七章（动态创建标记）"></a>第七章（动态创建标记）</h2><h3 id="传统方法"><a href="#传统方法" class="headerlink" title="传统方法"></a>传统方法</h3><ul>
+<li><code>document.write(&quot;&lt;P&gt;this is passage.&lt;/p&gt;&quot;);</code><br>它可以便捷的将字符串插入到文档里；但最大的缺点是它违背了行为与表现分离的原则，需要&lt; script &gt;的引入；且容易导致验证错误。</li>
+<li><code>node.innerHTML = &quot;&lt;P&gt;this is passage.&lt;/p&gt;&quot;</code><br>innerHTML属性不是W3C DOM标准组成部分，但包含到了HTML5规范中。（几乎所有浏览器都支持innerHTML属性。）innerHTML毫无细节可言，要想获得细节，必须使用DOM方法和属性。（无法区分插入和替换；一旦使用全部替换。）<strong>浏览器在呈现正宗xhtml文档是会忽略innerHTML属性。</strong></li>
+</ul>
+<p>这两者都是HTML专有属性，不能用于其他任何标记语言。</p>
+<h3 id="DOM方法"><a href="#DOM方法" class="headerlink" title="DOM方法"></a>DOM方法</h3><p>使用DOM方法改变的是DOM节点树；在节点树上添加内容，就必须插入新的节点。</p>
+<h4 id="新节点创建"><a href="#新节点创建" class="headerlink" title="新节点创建"></a>新节点创建</h4><ul>
+<li>创建元素节点并赋值<code>var nodeTag = document.createElement(&quot;tagname&quot;)；</code></li>
+<li>创建文本节点并赋值<code>var txt = document.createTextNode(&quot;new text&quot;);</code></li>
+<li>将节点插入节点树<code>parent.appendChild(child)</code></li>
+<li>在已有元素前插入一个新元素<code>parentElement.insertBefore(newElement,targetElement);</code>（目标元素父元素/利用targetElement的parentNode属性/；想插入的元素；插入的是<strong>目标元素</strong>之前）</li>
+<li>在已有元素后插入一个新元素(DOM没有该方法)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function insertAfter(newElement,targetElement)&#123;</div><div class="line">	var parent = targetElement.parentNode;</div><div class="line">	if(parent.lastChild == targetElement)&#123;</div><div class="line">		parent.appendChild(newElement);</div><div class="line">	&#125;else&#123;</div><div class="line">		parent.insertBefore(newElement,targetElement.nextSibling);</div><div class="line">	&#125;</div><div class="line">&#125;//nextSibling是兄弟元素。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p>异步加载:主要优势就是对页面的请求以异步的方式发送到服务器；而服务器不会以整个页面来响应请求，它会在后台处理请求，与此同时用户还能继续浏览页面并和页面交互。<br>（适用范围：它依赖于javascript，所以可能会有浏览器不支持它，且搜索引擎的爬虫程序也不会抓取到有关内容。）</p>
+<h4 id="核心对象"><a href="#核心对象" class="headerlink" title="核心对象"></a>核心对象</h4><p>XMLHttpRequest对象，它充当了浏览器脚本和服务器之间的中间人的角色。它有许多方法，其中最有用的是open方法，它用来指定服务器上将要访问的文件，指定请求类型：GET,POST,SEND；该方法的第三个参数用于只给指定请求是否以异步的方式发送和处理。</p>
+<ol>
+<li><p>为了解决不同浏览器不兼容问题；给出以下函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getHTTPObject()&#123;</div><div class="line">   	if (typeof XMLHttpRequest == &quot;undefined&quot;)&#123;</div><div class="line">       	XMLHttpRequest = function()&#123;</div><div class="line">           	try &#123;return new ActiveXObject(&quot;Msxml2.XMLHTTP.6.0&quot;);&#125;/*不理解*/</div><div class="line">           	catch (e)&#123;&#125;</div><div class="line">           	try &#123;return new ActiveXObject(&quot;Msxml2.XMLHTTP.3.0&quot;);&#125;</div><div class="line">           	catch (e)&#123;&#125;</div><div class="line">           	try &#123;return new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);&#125;</div><div class="line">           	catch (e)&#123;&#125;</div><div class="line">           	return false;</div><div class="line">       	&#125;</div><div class="line">   	&#125;else &#123;</div><div class="line">       return new XMLHttpRequest();</div><div class="line">   	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建XMLHttpRequest对象：<code>var request = getHTTPObject();</code></p>
+</li>
+<li>使用XMLHttpRequest对象open方法：<code>request.open(&quot;GET&quot;,&quot;example.txt&quot;,true)</code></li>
+<li><p>onreadystatechange事件处理函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">request.onreadystatechange = function()&#123;</div><div class="line">//处理响应</div><div class="line">&#125;；</div></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求：<code>request.send(null);</code></p>
+</li>
+</ol>
+<p><em>readystate属性值：</em></p>
+<ul>
+<li>0；未初始化</li>
+<li>1；正在加载</li>
+<li>2；加载完毕</li>
+<li>3；正在交互</li>
+<li>4；完成交互</li>
+</ul>
+<p><em>用于访问服务器发回的数据的两个属性</em><br>responseText属性：用于保存文本字符串数据<br>responseXML属性：用于保存Content-Type头部中指定为“text/xml”的数据</p>
+<h4 id="注意-2"><a href="#注意-2" class="headerlink" title="注意"></a>注意</h4><p>使用Ajax时；千万要注意同源策略，其发送的请求只能访问与其所在的HTML处于同一个域中的数据，不能向其他域发送请求。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/lsdmzqf.jpg" alt="star Huang wechat" style="width: 200px; max-width: 100%;"/>
+    <div>my wechat public welcomes to your attention</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/05/javascript-dom-art3/" rel="next" title="javascript DOM 编程艺术笔记3">
+                <i class="fa fa-chevron-left"></i> javascript DOM 编程艺术笔记3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://p1.bqimg.com/4851/04ae3b5adaa2608e.jpg"
+               alt="star Huang" />
+          <p class="site-author-name" itemprop="name">star Huang</p>
+           
+              <p class="site-description motion-element" itemprop="description">the past is beyond recall but the future can be cherished</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lsdm" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://freecodecamp.cn/lsdm" target="_blank" title="freecodecamp">
+                  
+                    <i class="fa fa-fw fa-free-code-camp"></i>
+                  
+                  freecodecamp
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/%E5%85%B4%E6%88%90-%E9%BB%84-57a382123/" target="_blank" title="linkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                  linkedIn
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/huang-cheng-zi-84" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章"><span class="nav-number">1.</span> <span class="nav-text">第六章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结构化程序设计备忘"><span class="nav-number">1.1.</span> <span class="nav-text">结构化程序设计备忘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享onload事件"><span class="nav-number">1.2.</span> <span class="nav-text">共享onload事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化"><span class="nav-number">1.4.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#键盘访问"><span class="nav-number">1.4.1.</span> <span class="nav-text">键盘访问</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意-1"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章（动态创建标记）"><span class="nav-number">2.</span> <span class="nav-text">第七章（动态创建标记）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统方法"><span class="nav-number">2.1.</span> <span class="nav-text">传统方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM方法"><span class="nav-number">2.2.</span> <span class="nav-text">DOM方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新节点创建"><span class="nav-number">2.2.1.</span> <span class="nav-text">新节点创建</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax"><span class="nav-number">2.3.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#核心对象"><span class="nav-number">2.3.1.</span> <span class="nav-text">核心对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">star Huang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
