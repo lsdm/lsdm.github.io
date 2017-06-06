@@ -87,34 +87,25 @@
 
 
 
-<meta name="description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
+<meta name="description" content="第九章 第十章网页组成
+结构层由标记语言创建；主要展现网页的结构；
+表现层由css完成，主要描述页面内容该如何呈现；
+行为层展现了内容该如何响应事件。网页是由结构层，表现层，行为层三者构成的共同体：网页中总是会有默认的表现和行为；这三者之间存在交叉重叠现象。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript DOM 编程艺术笔记2">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/javascript-dom-art/index.html">
+<meta property="og:title" content="javascript DOM 编程艺术笔记5">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/javascript-dom-art5/index.html">
 <meta property="og:site_name" content="blog of lsdm">
-<meta property="og:description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
-<meta property="og:updated_time" content="2017-06-05T10:30:33.237Z">
+<meta property="og:description" content="第九章 第十章网页组成
+结构层由标记语言创建；主要展现网页的结构；
+表现层由css完成，主要描述页面内容该如何呈现；
+行为层展现了内容该如何响应事件。网页是由结构层，表现层，行为层三者构成的共同体：网页中总是会有默认的表现和行为；这三者之间存在交叉重叠现象。">
+<meta property="og:updated_time" content="2017-06-06T14:52:05.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript DOM 编程艺术笔记2">
-<meta name="twitter:description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
+<meta name="twitter:title" content="javascript DOM 编程艺术笔记5">
+<meta name="twitter:description" content="第九章 第十章网页组成
+结构层由标记语言创建；主要展现网页的结构；
+表现层由css完成，主要描述页面内容该如何呈现；
+行为层展现了内容该如何响应事件。网页是由结构层，表现层，行为层三者构成的共同体：网页中总是会有默认的表现和行为；这三者之间存在交叉重叠现象。">
 
 
 
@@ -142,13 +133,13 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/05/javascript-dom-art/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/06/javascript-dom-art5/"/>
 
 
 
 
 
-  <title> javascript DOM 编程艺术笔记2 | blog of lsdm </title>
+  <title> javascript DOM 编程艺术笔记5 | blog of lsdm </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +278,7 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/javascript-dom-art/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/06/javascript-dom-art5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="star Huang">
@@ -308,7 +299,7 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
             
             
               
-                javascript DOM 编程艺术笔记2
+                javascript DOM 编程艺术笔记5
               
             
           </h1>
@@ -323,8 +314,8 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T16:12:11+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T22:36:10+08:00">
+                2017-06-06
               </time>
             
 
@@ -359,45 +350,30 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
       
 
       
-        <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><ul>
-<li>如何利用DOM提供的方法编写图片库脚本。</li>
-<li>如何利用事件处理函数将javascript代码与网页集成在一起。</li>
+        <h2 id="第九章-第十章"><a href="#第九章-第十章" class="headerlink" title="第九章 第十章"></a>第九章 第十章</h2><h3 id="网页组成"><a href="#网页组成" class="headerlink" title="网页组成"></a>网页组成</h3><ul>
+<li>结构层由标记语言创建；主要展现网页的结构；</li>
+<li>表现层由css完成，主要描述页面内容该如何呈现；</li>
+<li>行为层展现了内容该如何响应事件。<br>网页是由结构层，表现层，行为层三者构成的共同体：网页中总是会有默认的表现和行为；这三者之间存在交叉重叠现象。<a id="more"></a>
+<h3 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h3></li>
+<li>文档的元素节点有一个style属性（也是一个对象）；它包含着元素的样式。</li>
+<li>在应用style属性时；对类似font-family的属性要转换成驼峰形式fontFamily。</li>
+<li>DOM中样式属性的单位和css的单位可能不同。（比如颜色值）</li>
 </ul>
-<h3 id="在javascript中改变元素属性"><a href="#在javascript中改变元素属性" class="headerlink" title="在javascript中改变元素属性"></a>在javascript中改变元素属性</h3><ul>
-<li>非DOM解决方案：<code>element.value = &quot;the new value&quot;</code></li>
-<li>DOM解决方案:<code>element.setAttribute(&quot;value&quot;,&quot;the new value&quot;);</code><a id="more"></a>
-setAttribute是DOM Level1的组成部分，用（element.value=”the new value”）可以实现相同的效果；但DOM1的优势在于其可以修改文档中任意一个元素的任意属性，而且可移植性更好；DOM是一种适用于多种环境和多种程序语言的通用型API。<h3 id="事件处理函数"><a href="#事件处理函数" class="headerlink" title="事件处理函数"></a>事件处理函数</h3>事件处理函数可以在特定事件发生时调用特定的javascript代码。</li>
+<h4 id="style属性局限性"><a href="#style属性局限性" class="headerlink" title="style属性局限性"></a>style属性局限性</h4><p>只能返回内嵌样式；这将会导致结构与表现混杂。来自外部文件和内部的样式不能用style检索出来。但用DOM设置的样式可以用DOM再将它们检索出来。</p>
+<p>Style是可读写的：<code>element.style.property = “value”;</code>(“”不能掉，否则value会被解释为变量)</p>
+<h3 id="何时使用DOM设置样式"><a href="#何时使用DOM设置样式" class="headerlink" title="何时使用DOM设置样式"></a>何时使用DOM设置样式</h3><h4 id="使用css的情况"><a href="#使用css的情况" class="headerlink" title="使用css的情况"></a>使用css的情况</h4><ul>
+<li>为标签元素统一声明；</li>
+<li>为特定的class属性元素统一声明；</li>
+<li>为有独一无二的id属性的元素单独声明样式。</li>
 </ul>
-<p>添加事件处理函数的语法：event = “javascript statement(s)”;具体如onclick = “showPic（this）”。使用onclick时<br>，函数参数通常可以用this代替该元素。</p>
-<h4 id="工作机制"><a href="#工作机制" class="headerlink" title="工作机制"></a>工作机制</h4><p>一旦事件发生，相应代码就会得到执行，被调用的javascript代码可以返回一个值，这个值将传递给事件处理函数。</p>
-<h4 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h4><ul>
-<li><code>onclick</code> 当用户点击鼠标时；</li>
-<li><code>onmouseover</code>鼠标移动到元素上时；</li>
-<li><code>ommouseout</code> 鼠标移出元素时；</li>
-<li><code>onchange</code> 输入字段被改变时；</li>
-<li><code>onsubmit</code> 当提交 HTML 表单时；</li>
-<li><code>onblur</code> 元素失去焦点时触发 </li>
-<li><code>onchange</code> 该事件在表单元素的内容改变时触发( &lt; input &gt;, &lt; keygen &gt;, &lt; select &gt;, 和 &lt; textarea &gt;) </li>
-<li><p><code>onfocus</code> 元素获取焦点时触发 </p>
-</li>
-<li><p><code>onkeydown</code> 某个键盘按键被按下。</p>
-</li>
-<li><code>onkeyup</code> 某个键盘按键被松开。 </li>
-<li><p><code>onkeypress</code> 某个键盘按键被按下并松开。</p>
-</li>
-<li><p><code>onunload</code> 用户退出页面。</p>
-</li>
-<li><code>onload</code> 当网页已加载时；当图像已加载时；</li>
-<li><code>onresize</code> 窗口或框架被重新调整大小。 </li>
-<li><code>onscroll</code> 当文档被滚动时发生的事件。</li>
-<li><code>onbeforeunload</code> 在即将离开页面（刷新或关闭）时触发 </li>
-</ul>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p><strong><code>window.onload = func</code>；因为是在页面加载时调用某一函数，而非将函数值传给该事件，所以千万不能加().</strong></p>
-<h4 id="性能改善1"><a href="#性能改善1" class="headerlink" title="性能改善1"></a>性能改善1</h4><p>若一个站点用到了多个javascript文件，为了减少对站点的请求次数，提高性能，应该将它们合并到一个文件中。</p>
-<h3 id="childNodes属性"><a href="#childNodes属性" class="headerlink" title="childNodes属性"></a>childNodes属性</h3><p>Element.childNodes可以用来获取任何一个元素的所有子元素，其是一个子元素数组。<br>文档里几乎每一样东西都是一个节点，甚至连空格和换行符都会被解释为节点而包含在childNodes属性所返回的数组中。</p>
-<h3 id="nodeType属性"><a href="#nodeType属性" class="headerlink" title="nodeType属性"></a>nodeType属性</h3><p><code>node.nodeType</code>的值（数字）反映了节点类型，总共有12种，但仅其中三种具有实用价值。<br>元素节点为1，属性节点为2，文本节点为3。</p>
-<h3 id="nodeValue属性"><a href="#nodeValue属性" class="headerlink" title="nodeValue属性"></a>nodeValue属性</h3><p>要改变一个文本节点的值，可使用DOM提供的nodeValue属性。<code>node.nodeValue</code>（注意：p元素本身的nodeValue属性是一个空值；而其文本是p元素的第一个子节点，因此应对其第一子节点调用nodeValue。）</p>
-<h3 id="Node-firstChild与node-lastChild属性"><a href="#Node-firstChild与node-lastChild属性" class="headerlink" title="Node.firstChild与node.lastChild属性"></a>Node.firstChild与node.lastChild属性</h3><p><code>node.firstChild</code>与数组元素第一子元素<code>node.childNodes[0]</code>相同。<br><code>node.lastChild</code>与数组元素最后一个子元素<code>node.childNodes[node.childNodes.length-1]</code>相同。</p>
+<ol>
+<li>根据元素在节点树里的位置来设置样式。（DOM在查询某位置元素上有优势）</li>
+<li>根据某种条件反复设置某种样式。（比如为了提高表格行的可读性而交替改变其背景色的斑马线效果）（特别是定时重复一组操作；css基本不可能实现。）</li>
+<li>针对类似css的：hover和DOM的onmouseover事件；一般选择最容易实现的方法。（浏览器一般对某些css支持不够好，但对DOM却很好；因此还要考虑浏览器对那种方法更支持）</li>
+</ol>
+<p>在行为层里更改样式；更好地方法是直接改变元素的className属性。（使用setAttribute方法）不足在于其会替换（而非追加）该元素原有的class设置；（追加操作：<code>elem.className += “new className”</code>；之前需要判断原来是否有className属性。）</p>
+<h3 id="setTimeout函数"><a href="#setTimeout函数" class="headerlink" title="setTimeout函数"></a>setTimeout函数</h3><p>Javascript函数setTimeout能够让某个函数在经过一定的时间后才开始执行。<br><code>action = setTimeout(“function”,interval);</code><br>在interval时间段内可以用clearTimeout(action);取消执行。</p>
+<h3 id="注意内容可访问性"><a href="#注意内容可访问性" class="headerlink" title="注意内容可访问性"></a>注意内容可访问性</h3><p>W3C在Web内容可访问性指南里给出了这样的建议：除非浏览器允许用户冻结移动的内容，否则应该避免让内容在页面中移动。</p>
 
       
     </div>
@@ -445,8 +421,8 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/02/javascript-coding-art-about-dom/" rel="next" title="javascript DOM 编程艺术笔记1">
-                <i class="fa fa-chevron-left"></i> javascript DOM 编程艺术笔记1
+              <a href="/2017/06/05/javascript-dom-art4/" rel="next" title="javascript DOM编程艺术笔记4">
+                <i class="fa fa-chevron-left"></i> javascript DOM编程艺术笔记4
               </a>
             
           </div>
@@ -454,10 +430,6 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/05/javascript-dom-art3/" rel="prev" title="javascript DOM 编程艺术笔记3">
-                javascript DOM 编程艺术笔记3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -615,7 +587,7 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">1.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重点"><span class="nav-number">1.1.</span> <span class="nav-text">重点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在javascript中改变元素属性"><span class="nav-number">1.2.</span> <span class="nav-text">在javascript中改变元素属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件处理函数"><span class="nav-number">1.3.</span> <span class="nav-text">事件处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作机制"><span class="nav-number">1.3.1.</span> <span class="nav-text">工作机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见事件"><span class="nav-number">1.3.2.</span> <span class="nav-text">常见事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意"><span class="nav-number">1.3.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能改善1"><span class="nav-number">1.3.4.</span> <span class="nav-text">性能改善1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#childNodes属性"><span class="nav-number">1.4.</span> <span class="nav-text">childNodes属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeType属性"><span class="nav-number">1.5.</span> <span class="nav-text">nodeType属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeValue属性"><span class="nav-number">1.6.</span> <span class="nav-text">nodeValue属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-firstChild与node-lastChild属性"><span class="nav-number">1.7.</span> <span class="nav-text">Node.firstChild与node.lastChild属性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第九章-第十章"><span class="nav-number">1.</span> <span class="nav-text">第九章 第十章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网页组成"><span class="nav-number">1.1.</span> <span class="nav-text">网页组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#style属性"><span class="nav-number">1.2.</span> <span class="nav-text">style属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#style属性局限性"><span class="nav-number">1.2.1.</span> <span class="nav-text">style属性局限性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#何时使用DOM设置样式"><span class="nav-number">1.3.</span> <span class="nav-text">何时使用DOM设置样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用css的情况"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用css的情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setTimeout函数"><span class="nav-number">1.4.</span> <span class="nav-text">setTimeout函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意内容可访问性"><span class="nav-number">1.5.</span> <span class="nav-text">注意内容可访问性</span></a></li></ol></li></ol></div>
             
 
           </div>
