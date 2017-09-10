@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -87,34 +87,19 @@
 
 
 
-<meta name="description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
+<meta name="description" content="this is annoyance学习 this 的第一步是明白 this 既不指向函数自身也不指向函数的词法作用域（函数声明的位置）。
+this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调 用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript DOM 编程艺术笔记2">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/javascript-dom-art/index.html">
+<meta property="og:title" content="javascript之this初探">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/javascript-this/index.html">
 <meta property="og:site_name" content="the blue dream">
-<meta property="og:description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
-<meta property="og:updated_time" content="2017-06-18T09:55:32.332Z">
+<meta property="og:description" content="this is annoyance学习 this 的第一步是明白 this 既不指向函数自身也不指向函数的词法作用域（函数声明的位置）。
+this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调 用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。">
+<meta property="og:updated_time" content="2017-09-10T07:08:54.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript DOM 编程艺术笔记2">
-<meta name="twitter:description" content="第四章重点
-如何利用DOM提供的方法编写图片库脚本。
-如何利用事件处理函数将javascript代码与网页集成在一起。
-
-在javascript中改变元素属性
-非DOM解决方案：element.value = &amp;quot;the new value&amp;quot;
-DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new value&amp;qu">
+<meta name="twitter:title" content="javascript之this初探">
+<meta name="twitter:description" content="this is annoyance学习 this 的第一步是明白 this 既不指向函数自身也不指向函数的词法作用域（函数声明的位置）。
+this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调 用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。">
 
 
 
@@ -142,13 +127,13 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/05/javascript-dom-art/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/10/javascript-this/"/>
 
 
 
 
 
-  <title> javascript DOM 编程艺术笔记2 | the blue dream </title>
+  <title> javascript之this初探 | the blue dream </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,8 +271,8 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
   
   
 
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/javascript-dom-art/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/javascript-this/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="star Huang">
@@ -308,7 +293,7 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
             
             
               
-                javascript DOM 编程艺术笔记2
+                javascript之this初探
               
             
           </h1>
@@ -323,8 +308,8 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T16:12:11+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T14:41:29+08:00">
+                2017-09-10
               </time>
             
 
@@ -346,8 +331,8 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端javascript学习/" itemprop="url" rel="index">
-                    <span itemprop="name">前端javascript学习</span>
+                  <a href="/categories/前端JavaScript学习/" itemprop="url" rel="index">
+                    <span itemprop="name">前端JavaScript学习</span>
                   </a>
                 </span>
 
@@ -381,45 +366,15 @@ DOM解决方案:element.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;the new
       
 
       
-        <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><ul>
-<li>如何利用DOM提供的方法编写图片库脚本。</li>
-<li>如何利用事件处理函数将javascript代码与网页集成在一起。</li>
-</ul>
-<h3 id="在javascript中改变元素属性"><a href="#在javascript中改变元素属性" class="headerlink" title="在javascript中改变元素属性"></a>在javascript中改变元素属性</h3><ul>
-<li>非DOM解决方案：<code>element.value = &quot;the new value&quot;</code></li>
-<li>DOM解决方案:<code>element.setAttribute(&quot;value&quot;,&quot;the new value&quot;);</code><a id="more"></a>
-setAttribute是DOM Level1的组成部分，用（element.value=”the new value”）可以实现相同的效果；但DOM1的优势在于其可以修改文档中任意一个元素的任意属性，而且可移植性更好；DOM是一种适用于多种环境和多种程序语言的通用型API。<h3 id="事件处理函数"><a href="#事件处理函数" class="headerlink" title="事件处理函数"></a>事件处理函数</h3>事件处理函数可以在特定事件发生时调用特定的javascript代码。</li>
-</ul>
-<p>添加事件处理函数的语法：event = “javascript statement(s)”;具体如onclick = “showPic（this）”。使用onclick时<br>，函数参数通常可以用this代替该元素。</p>
-<h4 id="工作机制"><a href="#工作机制" class="headerlink" title="工作机制"></a>工作机制</h4><p>一旦事件发生，相应代码就会得到执行，被调用的javascript代码可以返回一个值，这个值将传递给事件处理函数。</p>
-<h4 id="常见事件"><a href="#常见事件" class="headerlink" title="常见事件"></a>常见事件</h4><ul>
-<li><code>onclick</code> 当用户点击鼠标时；</li>
-<li><code>onmouseover</code>鼠标移动到元素上时；</li>
-<li><code>ommouseout</code> 鼠标移出元素时；</li>
-<li><code>onchange</code> 输入字段被改变时；</li>
-<li><code>onsubmit</code> 当提交 HTML 表单时；</li>
-<li><code>onblur</code> 元素失去焦点时触发 </li>
-<li><code>onchange</code> 该事件在表单元素的内容改变时触发( &lt; input &gt;, &lt; keygen &gt;, &lt; select &gt;, 和 &lt; textarea &gt;) </li>
-<li><p><code>onfocus</code> 元素获取焦点时触发 </p>
-</li>
-<li><p><code>onkeydown</code> 某个键盘按键被按下。</p>
-</li>
-<li><code>onkeyup</code> 某个键盘按键被松开。 </li>
-<li><p><code>onkeypress</code> 某个键盘按键被按下并松开。</p>
-</li>
-<li><p><code>onunload</code> 用户退出页面。</p>
-</li>
-<li><code>onload</code> 当网页已加载时；当图像已加载时；</li>
-<li><code>onresize</code> 窗口或框架被重新调整大小。 </li>
-<li><code>onscroll</code> 当文档被滚动时发生的事件。</li>
-<li><code>onbeforeunload</code> 在即将离开页面（刷新或关闭）时触发 </li>
-</ul>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p><strong><code>window.onload = func</code>；因为是在页面加载时调用某一函数，而非将函数值传给该事件，所以千万不能加().</strong></p>
-<h4 id="性能改善1"><a href="#性能改善1" class="headerlink" title="性能改善1"></a>性能改善1</h4><p>若一个站点用到了多个javascript文件，为了减少对站点的请求次数，提高性能，应该将它们合并到一个文件中。</p>
-<h3 id="childNodes属性"><a href="#childNodes属性" class="headerlink" title="childNodes属性"></a>childNodes属性</h3><p>Element.childNodes可以用来获取任何一个元素的所有子元素，其是一个子元素数组。<br>文档里几乎每一样东西都是一个节点，甚至连空格和换行符都会被解释为节点而包含在childNodes属性所返回的数组中。</p>
-<h3 id="nodeType属性"><a href="#nodeType属性" class="headerlink" title="nodeType属性"></a>nodeType属性</h3><p><code>node.nodeType</code>的值（数字）反映了节点类型，总共有12种，但仅其中三种具有实用价值。<br>元素节点为1，属性节点为2，文本节点为3。</p>
-<h3 id="nodeValue属性"><a href="#nodeValue属性" class="headerlink" title="nodeValue属性"></a>nodeValue属性</h3><p>要改变一个文本节点的值，可使用DOM提供的nodeValue属性。<code>node.nodeValue</code>（注意：p元素本身的nodeValue属性是一个空值；而其文本是p元素的第一个子节点，因此应对其第一子节点调用nodeValue。）</p>
-<h3 id="Node-firstChild与node-lastChild属性"><a href="#Node-firstChild与node-lastChild属性" class="headerlink" title="Node.firstChild与node.lastChild属性"></a>Node.firstChild与node.lastChild属性</h3><p><code>node.firstChild</code>与数组元素第一子元素<code>node.childNodes[0]</code>相同。<br><code>node.lastChild</code>与数组元素最后一个子元素<code>node.childNodes[node.childNodes.length-1]</code>相同。</p>
+        <h2 id="this-is-annoyance"><a href="#this-is-annoyance" class="headerlink" title="this is annoyance"></a>this is annoyance</h2><p>学习 this 的第一步是明白 this 既不指向函数自身也不指向函数的词法作用域（函数声明的位置）。</p>
+<p>this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调 用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。<br><a id="more"></a><br>当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。this 就是记录的其中一个属性，会在函数执行的过程中用到。</p>
+<p>寻找调用位置最重要的是要分析调用栈（就是为了到达当前执行位置所调用的所有函数）。我们关心的调用位置就在当前正在执行的函数的前一个调用中。</p>
+<h2 id="四大规则："><a href="#四大规则：" class="headerlink" title="四大规则："></a>四大规则：</h2><p>1.在代码中，若某函数foo() 是直接使用不带任何修饰的函数引用进行调用的（即在定义区直接调用），那么只能使用 默认绑定（this 指向全局对象），无法应用其他规则。 如果使用严格模式（strict  mode），那么全局对象将无法使用默认绑定，因此 this 会绑定 到undefined： 只 有 foo() 运行在非 strict  mode下时，默认绑定才能绑定到全局对象；严格模式下与 foo() 的调用位置无关：<br>2.要看调用位置是否有上下文对象，或者说是否被某个对象拥有或者包含，不过这种说法可能会造成一些误导。 对象属性引用链中只有最顶层或者说最后一层会影响调用位置。（个人注释：由于就近原则；只会调用最近的对象）<br>被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定，从而把 this 绑定到全局对象或者 undefined 上，取决于是否是严格模式。<br>3.JavaScript提供的绝大多数函数以及自 己创建的所有函数都可以使用 call(..) 和 apply(..) 方法（这两种方法的区别在于它们的参数形式不同）在某个对象上强制调用函数；这称之为显式绑定。其中第一参数为原始类型；会创建对象并将其绑定到this上。硬绑定非常实用；可以通过函数的bind()原型方法实现。<br>4.使用 new 来调用 foo(..) 时，我们会构造一个新对象并把它绑定到 foo(..)调用中的this 上。new 是最后一种可以影响函数调用时 this 绑定行为的方法，我们称之为 new 绑定。</p>
+<h3 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h3><p>1.函数是否在 new 中调用（new 绑定）？如果是的话 this 绑定的是新创建的对象。 var bar = new foo()<br>2.函数是否通过 call、apply（显式绑定）或者硬绑定调用？如果是的话，this 绑定的是 指定的对象。<br>var bar = foo.call(obj2)<br>3.函数是否在某个上下文对象中调用（隐式绑定）？如果是的话，this 绑定的是那个上 下文对象。<br>var bar = obj1.foo()<br>4.如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 undefined，否则绑定到 全局对象。</p>
+<h2 id="例外规则；"><a href="#例外规则；" class="headerlink" title="例外规则；"></a>例外规则；</h2><p>如果你把 null 或者 undefined 作为 this 的绑定对象传入 call、apply 或者 bind，这些值 在调用时会被忽略，实际应用的是默认绑定规则。然而使用 null 来忽略 this 绑定可能产生一些副作用；比如修改全局对象。</p>
+<p>有可能（有意或者无意地）创建一个函数的“间接引用”，在这种情况下，调用这个函数会应用默认绑定规则。</p>
+<p>软绑定：给默认绑定指定一个全局对象和 undefined 以外的值，那就可以实现和硬绑定相同的效果，同时保留隐式绑定或者显式绑定修改 this 的能力。</p>
+<p>ES6的坑：箭头函数并不是使用function关键字定义的，而是使用被称为“胖箭头”的操作符 =&gt;定义的。箭头函数不使用this的四种标准规则，而是根据外层（函数或者全局）作用域来决定 this。</p>
 
       
     </div>
@@ -454,7 +409,7 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -467,8 +422,8 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/02/javascript-coding-art-about-dom/" rel="next" title="javascript DOM 编程艺术笔记1">
-                <i class="fa fa-chevron-left"></i> javascript DOM 编程艺术笔记1
+              <a href="/2017/09/10/css-float/" rel="next" title="css_float">
+                <i class="fa fa-chevron-left"></i> css_float
               </a>
             
           </div>
@@ -477,8 +432,8 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/05/javascript-dom-art3/" rel="prev" title="javascript DOM 编程艺术笔记3">
-                javascript DOM 编程艺术笔记3 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/10/javascript-JSON/" rel="prev" title="javascript之JSON初探">
+                javascript之JSON初探 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +601,7 @@ setAttribute是DOM Level1的组成部分，用（element.value=”the new value�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">1.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重点"><span class="nav-number">1.1.</span> <span class="nav-text">重点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在javascript中改变元素属性"><span class="nav-number">1.2.</span> <span class="nav-text">在javascript中改变元素属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件处理函数"><span class="nav-number">1.3.</span> <span class="nav-text">事件处理函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作机制"><span class="nav-number">1.3.1.</span> <span class="nav-text">工作机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见事件"><span class="nav-number">1.3.2.</span> <span class="nav-text">常见事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意"><span class="nav-number">1.3.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能改善1"><span class="nav-number">1.3.4.</span> <span class="nav-text">性能改善1</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#childNodes属性"><span class="nav-number">1.4.</span> <span class="nav-text">childNodes属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeType属性"><span class="nav-number">1.5.</span> <span class="nav-text">nodeType属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeValue属性"><span class="nav-number">1.6.</span> <span class="nav-text">nodeValue属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-firstChild与node-lastChild属性"><span class="nav-number">1.7.</span> <span class="nav-text">Node.firstChild与node.lastChild属性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#this-is-annoyance"><span class="nav-number">1.</span> <span class="nav-text">this is annoyance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四大规则："><span class="nav-number">2.</span> <span class="nav-text">四大规则：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优先级："><span class="nav-number">2.1.</span> <span class="nav-text">优先级：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例外规则；"><span class="nav-number">3.</span> <span class="nav-text">例外规则；</span></a></li></ol></div>
             
 
           </div>
