@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -87,22 +87,16 @@
 
 
 
-<meta name="description" content="css的作用1.修饰页面元素，避免使用不必要的HTML元素（如font），进而构建语义化的页面结构2.更有效的控制页面结构，页面布局（div+css）。3.提高开发和维护效率（特别是对于相同的结构或样式）。
-css基本结构选择符
-声明（包括属性和属性值）">
+<meta name="description" content="模块：最常见的实现模块模式的方法通常被称为模块暴露；而这就可能用到闭包。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css那些事儿">
-<meta property="og:url" content="http://yoursite.com/2017/06/01/selector/index.html">
+<meta property="og:title" content="javascript之模块（闭包后传）">
+<meta property="og:url" content="http://yoursite.com/2017/09/14/javascript-closure-3/index.html">
 <meta property="og:site_name" content="the blue dream">
-<meta property="og:description" content="css的作用1.修饰页面元素，避免使用不必要的HTML元素（如font），进而构建语义化的页面结构2.更有效的控制页面结构，页面布局（div+css）。3.提高开发和维护效率（特别是对于相同的结构或样式）。
-css基本结构选择符
-声明（包括属性和属性值）">
-<meta property="og:updated_time" content="2017-06-18T12:30:28.301Z">
+<meta property="og:description" content="模块：最常见的实现模块模式的方法通常被称为模块暴露；而这就可能用到闭包。">
+<meta property="og:updated_time" content="2017-09-14T04:23:20.221Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css那些事儿">
-<meta name="twitter:description" content="css的作用1.修饰页面元素，避免使用不必要的HTML元素（如font），进而构建语义化的页面结构2.更有效的控制页面结构，页面布局（div+css）。3.提高开发和维护效率（特别是对于相同的结构或样式）。
-css基本结构选择符
-声明（包括属性和属性值）">
+<meta name="twitter:title" content="javascript之模块（闭包后传）">
+<meta name="twitter:description" content="模块：最常见的实现模块模式的方法通常被称为模块暴露；而这就可能用到闭包。">
 
 
 
@@ -130,13 +124,13 @@ css基本结构选择符
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/01/selector/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/14/javascript-closure-3/"/>
 
 
 
 
 
-  <title> css那些事儿 | the blue dream </title>
+  <title> javascript之模块（闭包后传） | the blue dream </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -275,7 +269,7 @@ css基本结构选择符
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/selector/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/javascript-closure-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="star Huang">
@@ -296,7 +290,7 @@ css基本结构选择符
             
             
               
-                css那些事儿
+                javascript之模块（闭包后传）
               
             
           </h1>
@@ -311,8 +305,8 @@ css基本结构选择符
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-01T15:58:59+08:00">
-                2017-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T11:29:22+08:00">
+                2017-09-14
               </time>
             
 
@@ -334,8 +328,8 @@ css基本结构选择符
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端css学习/" itemprop="url" rel="index">
-                    <span itemprop="name">前端css学习</span>
+                  <a href="/categories/前端javascript学习/" itemprop="url" rel="index">
+                    <span itemprop="name">前端javascript学习</span>
                   </a>
                 </span>
 
@@ -369,50 +363,15 @@ css基本结构选择符
       
 
       
-        <h2 id="css的作用"><a href="#css的作用" class="headerlink" title="css的作用"></a>css的作用</h2><p>1.修饰页面元素，避免使用不必要的HTML元素（如font），进而构建语义化的页面结构<br>2.更有效的控制页面结构，页面布局（div+css）。<br>3.提高开发和维护效率（特别是对于相同的结构或样式）。</p>
-<h2 id="css基本结构"><a href="#css基本结构" class="headerlink" title="css基本结构"></a>css基本结构</h2><p><em>选择符
-</em>声明（包括属性和属性值）<br><a id="more"></a></p>
-<h2 id="选择符种类"><a href="#选择符种类" class="headerlink" title="选择符种类"></a>选择符种类</h2><h3 id="通配选择符"><a href="#通配选择符" class="headerlink" title="通配选择符"></a>通配选择符</h3><pre><code>*{margin:0;paddin:0;}
-</code></pre><p>特殊情况可以对特定元素的所有后代元素应用样式。</p>
-<h3 id="类选择符"><a href="#类选择符" class="headerlink" title="类选择符"></a>类选择符</h3><pre><code>.class{margin:5px;}
-</code></pre><p>可多次调用，减少样式的定义，应用范围没有通配那么广泛。</p>
-<h3 id="ID选择符"><a href="#ID选择符" class="headerlink" title="ID选择符"></a>ID选择符</h3><pre><code>#idselector{margin:5px;}
-</code></pre><p>应用于javascript脚本比较多；最好一个元素只用一个ID。</p>
-<h3 id="包含选择符"><a href="#包含选择符" class="headerlink" title="包含选择符"></a>包含选择符</h3><pre><code>p span{color:red;}
-</code></pre><p>应用于元素的后代。</p>
-<h3 id="子选择符"><a href="#子选择符" class="headerlink" title="子选择符"></a>子选择符</h3><pre><code>p &gt; span{color:blue;}
-</code></pre><p>只应用于元素的子元素。</p>
-<h3 id="相邻选择符"><a href="#相邻选择符" class="headerlink" title="相邻选择符"></a>相邻选择符</h3><pre><code>p + span{color:green;}
-</code></pre><p>匹配同一父级元素下摸个元素之后的元素。</p>
-<h3 id="属性选择符"><a href="#属性选择符" class="headerlink" title="属性选择符"></a>属性选择符</h3><pre><code>E[attr[[~/|]=&quot;value&quot;]]
-</code></pre><p>匹配带有特定属性和属性值的元素；[~/|]比较少见。</p>
-<h3 id="伪类选择符"><a href="#伪类选择符" class="headerlink" title="伪类选择符"></a>伪类选择符</h3><pre><code>a:link{color:red;}/*运用于URI尚未访问过的链接*/
-a:visited{color:blue;}/*运用于URI已经访问过的链接*/
-a:hover{color:green;}/*运用于处于悬停状态的元素*/
-a:active{color:black;}/*运用于被激活的元素（如被点击的超链接）*/
-a:focus{color:white;}/*运用于有焦点的元素。*/
-</code></pre><p>伪类可让用户在使用页面的过程中增加更过交互效果，而不必过多使用javascript来完成；但IE6,IE7对伪类支持有限。</p>
-<h3 id="伪对象选择符"><a href="#伪对象选择符" class="headerlink" title="伪对象选择符"></a>伪对象选择符</h3><pre><code>p:before{content:&quot;前伪对象&quot;;}/*p前插入生成内容*/
-p:after{content:&quot;后伪对象&quot;;}/*p后插入生成内容*/
-e:first-letter{color:blue;}/*用于指定元素首字母的样式*/
-e:first-line{color:red;}/*用于设置元素中第一行文本的样式*/
-</code></pre><h3 id="选择符的组合关系"><a href="#选择符的组合关系" class="headerlink" title="选择符的组合关系"></a>选择符的组合关系</h3><p>选择符的最大的优点在于针对不同的页面结构组合成各种组合形    式使用；主要体现在针对性使用类选择符或ID选择符，选择符群组及选择符组合。<br>      p.class{color:red;}<br>      p#ids{color:blue;}<br>      .class, #ids{color:green;}<br>      p span{color:#ffffff;}</p>
-<h2 id="选择符的优先级"><a href="#选择符的优先级" class="headerlink" title="选择符的优先级"></a>选择符的优先级</h2><p>css层叠样式表的特色在于层叠，即css会根据选择符的使用而将样式相互叠加或覆盖；这涉及到覆盖与继承。<br>优先级如下：</p>
-<ul>
-<li>标有！important关键字声明的属性；<pre><code>p{color:blue !important;}
-</code></pre></li>
-<li>HTML中的css样式属性；<ul>
-<li>标签选择符，伪类及伪对象：1</li>
-<li>类选择符，属性选择符：10</li>
-<li>ID选择符：100</li>
-<li>style属性：1000</li>
-<li>其他如通配选择符：0</li>
-</ul>
-</li>
-<li>作者编辑的css文件样式属性；</li>
-<li>用户设置的样式；</li>
-<li>浏览器默认的样式；</li>
-</ul>
+        <h2 id="模块："><a href="#模块：" class="headerlink" title="模块："></a>模块：</h2><p>最常见的实现模块模式的方法通常被称为模块暴露；而这就可能用到闭包。<br><a id="more"></a></p>
+<h3 id="模块条件："><a href="#模块条件：" class="headerlink" title="模块条件："></a>模块条件：</h3><p>1.必须有外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块 实例）。<br>2.封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并 且可以访问或者修改私有的状态。<br>【1.用于创建模块实例的函数（实现内部作用域和闭包）；2.返回包含有内部函数（实现了对内部变量的隐藏和引用）的对象【可以看作模块的公共API】/或者直接返回内部函数； 】<br>show code to you！！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">var foo = (function Cool Module(id) &#123;</div><div class="line">    function change() &#123;</div><div class="line">        // 修改公共 API</div><div class="line">        public API.identify = identify2;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    function identify1() &#123; </div><div class="line">        console.log( id );</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    function identify2() &#123;</div><div class="line">        console.log( id.to Upper Case() );</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    var public API = &#123; </div><div class="line">        change: change,</div><div class="line">        identify: identify1</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    return public API;</div><div class="line">&#125;)( &quot;foo module&quot; );</div><div class="line"></div><div class="line">foo.identify(); // foo module</div><div class="line">foo.change();</div><div class="line">foo.identify(); // FOO MODULE</div></pre></td></tr></table></figure></p>
+<h2 id="现代的模块机制"><a href="#现代的模块机制" class="headerlink" title="现代的模块机制"></a>现代的模块机制</h2><p>大多数模块依赖加载器/管理器本质上都是将这种模块定义封装进一个友好的API 。<br>show code to you again！！！</p>
+<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var MyModules = (function Manager() &#123;</div><div class="line">    var modules = &#123;&#125;;</div><div class="line"></div><div class="line">    function define(name, deps, impl) &#123;</div><div class="line">        for (var i=0; i&lt;deps.length; i++) &#123;</div><div class="line">            deps[i] = modules[deps[i]];</div><div class="line">        &#125;</div><div class="line">        modules[name] = impl.apply( impl, deps );</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    function get(name) &#123;</div><div class="line">        return modules[name];</div><div class="line">    &#125;</div><div class="line">    return &#123;</div><div class="line">        define: define,</div><div class="line">        get: get</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>核心代码modules[name] = impl.apply(impl, deps)为模块的定义引入了包装函数（可以传入任何依赖），并且将返回值，也就是模块的API ，储存在一个根据名字来管 理的模块列表（返回的对象）中。</p>
+<p>###　使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">My Modules.define( &quot;bar&quot;, [], function() &#123;</div><div class="line">    function hello(who) &#123;</div><div class="line">        return &quot;Let me introduce: &quot; + who;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return &#123;</div><div class="line">        hello: hello</div><div class="line">    &#125;;</div><div class="line">&#125; );</div><div class="line"></div><div class="line">My Modules.define( &quot;foo&quot;, [&quot;bar&quot;], function(bar) &#123;</div><div class="line">    var hungry = &quot;hippo&quot;;</div><div class="line"></div><div class="line">    function awesome() &#123;</div><div class="line">        console.log( bar.hello( hungry ).to Upper Case() );</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return &#123;</div><div class="line">        awesome: awesome</div><div class="line">    &#125;;</div><div class="line">&#125; );</div><div class="line"></div><div class="line">var bar = My Modules.get( &quot;bar&quot; );</div><div class="line">var foo = My Modules.get( &quot;foo&quot; );</div><div class="line"></div><div class="line">console.log(</div><div class="line">    bar.hello( &quot;hippo&quot; )</div><div class="line">); // Let me introduce: hippo</div><div class="line"></div><div class="line">foo.awesome(); // LET ME INTRODUCE: HIPPO</div></pre></td></tr></table></figure></p>
+<h2 id="未来的模块机制："><a href="#未来的模块机制：" class="headerlink" title="未来的模块机制："></a>未来的模块机制：</h2><p>ES6中为模块增加了一级语法支持。但通过模块系统进行加载时，ES6会将文件当作独立的模块来处理。每个模块都可以导入其他模块或特定的 API 成员，同样也可以导出自己的 API成员。</p>
+<p>【以下是难以理解的部分】<br>基于函数的模块并不是一个能被稳定识别的模式（编译器无法识别），它们的API语义只有在运行时才会被考虑进来。因此可以在运行时修改一个模块的API。相比之下，ES6模块 API更加稳定（API不会在运行时改变）。由于编辑器知道这一点，因此可以在（的确也这样做了）编译期检查对导入模块API成员的引用是否真实存在。<br>ES6 的模块没有“行内”格式，必须被定义在独立的文件中（一个文件一个模块）。</p>
+<p><strong>import</strong> 可以将一个模块中的一个或多个 API 导入到当前作用域中，并分别绑定在一个变量 上（在我们的例子里是 hello）。<br><strong>module</strong> 会将整个模块的 API 导入并绑定到一个变量上（在 我们的例子里是 foo 和 bar）。<br><strong>export</strong> 会将当前模块的一个标识符（变量、函数）导出为公共API 。这些操作可以在模块定义中根据需要使用任意多次。</p>
 
       
     </div>
@@ -447,7 +406,7 @@ e:first-line{color:red;}/*用于设置元素中第一行文本的样式*/
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"># css</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -460,8 +419,8 @@ e:first-line{color:red;}/*用于设置元素中第一行文本的样式*/
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/24/freecodecamp-notes-3/" rel="next" title="freecodecamp-notes-3">
-                <i class="fa fa-chevron-left"></i> freecodecamp-notes-3
+              <a href="/2017/09/14/javascript-closure-2/" rel="next" title="javascript之闭包初探（闭包中传）">
+                <i class="fa fa-chevron-left"></i> javascript之闭包初探（闭包中传）
               </a>
             
           </div>
@@ -470,8 +429,8 @@ e:first-line{color:red;}/*用于设置元素中第一行文本的样式*/
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/02/markdown-and-hexo/" rel="prev" title="hexo文章创建与发布">
-                hexo文章创建与发布 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/14/javascript-prototype/" rel="prev" title="javascript_prototype">
+                javascript_prototype <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -639,7 +598,7 @@ e:first-line{color:red;}/*用于设置元素中第一行文本的样式*/
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css的作用"><span class="nav-number">1.</span> <span class="nav-text">css的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css基本结构"><span class="nav-number">2.</span> <span class="nav-text">css基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择符种类"><span class="nav-number">3.</span> <span class="nav-text">选择符种类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通配选择符"><span class="nav-number">3.1.</span> <span class="nav-text">通配选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类选择符"><span class="nav-number">3.2.</span> <span class="nav-text">类选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID选择符"><span class="nav-number">3.3.</span> <span class="nav-text">ID选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含选择符"><span class="nav-number">3.4.</span> <span class="nav-text">包含选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子选择符"><span class="nav-number">3.5.</span> <span class="nav-text">子选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相邻选择符"><span class="nav-number">3.6.</span> <span class="nav-text">相邻选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性选择符"><span class="nav-number">3.7.</span> <span class="nav-text">属性选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪类选择符"><span class="nav-number">3.8.</span> <span class="nav-text">伪类选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪对象选择符"><span class="nav-number">3.9.</span> <span class="nav-text">伪对象选择符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择符的组合关系"><span class="nav-number">3.10.</span> <span class="nav-text">选择符的组合关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择符的优先级"><span class="nav-number">4.</span> <span class="nav-text">选择符的优先级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块："><span class="nav-number">1.</span> <span class="nav-text">模块：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块条件："><span class="nav-number">1.1.</span> <span class="nav-text">模块条件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现代的模块机制"><span class="nav-number">2.</span> <span class="nav-text">现代的模块机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">2.1.</span> <span class="nav-text">定义：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未来的模块机制："><span class="nav-number">3.</span> <span class="nav-text">未来的模块机制：</span></a></li></ol></div>
             
 
           </div>
