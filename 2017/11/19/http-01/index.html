@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/19/http-01/index.html">
 <meta property="og:site_name" content="the blue dream">
 <meta property="og:description" content="HTTP01计算机网络知识点补充网络协议体系结构网络协议包括：语法；语义；同步。osi有七层协议体系结构；tcp/ip有四层体系结构。四层（三层）：应用层；运输层；网际层；网络接口层（无具体内容）。折中采用五层：应用层；传输层；网络层；数据链路层；物理层。应用层；应用层协议如http；ftp等传输层；TCP；UDP协议网际层；IP协议链路层：网络特有的链路接口物理层：物理网络硬件">
-<meta property="og:updated_time" content="2017-11-19T03:27:01.991Z">
+<meta property="og:updated_time" content="2017-11-19T03:32:21.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP权威指南笔记01">
 <meta name="twitter:description" content="HTTP01计算机网络知识点补充网络协议体系结构网络协议包括：语法；语义；同步。osi有七层协议体系结构；tcp/ip有四层体系结构。四层（三层）：应用层；运输层；网际层；网络接口层（无具体内容）。折中采用五层：应用层；传输层；网络层；数据链路层；物理层。应用层；应用层协议如http；ftp等传输层；TCP；UDP协议网际层；IP协议链路层：网络特有的链路接口物理层：物理网络硬件">
@@ -400,12 +400,14 @@
 </li>
 </ul>
 <p>HTTP事务：由一条请求命令和一个响应结果组成；通信是通过http报文的格式化数据块进行的。</p>
-<p>报文：是由一行行简单字符串组成的纯文本；人们可以很方便的对其进行读写。</p>
-<ul>
-<li>请求报文格式：<br>  method     request-URL     version<br>  headers<br>  entity-body</li>
-<li>响应报文格式：<br>  version     status     reason-phrase<br>  headers<br>  entity-body</li>
-</ul>
-<h3 id="报文组成："><a href="#报文组成：" class="headerlink" title="报文组成："></a>报文组成：</h3><h4 id="起始行："><a href="#起始行：" class="headerlink" title="起始行："></a>起始行：</h4><ul>
+<h3 id="报文："><a href="#报文：" class="headerlink" title="报文："></a>报文：</h3><p>是由一行行简单字符串组成的纯文本；人们可以很方便的对其进行读写。</p>
+<h4 id="请求报文格式："><a href="#请求报文格式：" class="headerlink" title="请求报文格式："></a>请求报文格式：</h4><pre><code>method     request-URL     version
+headers
+entity-body
+</code></pre><h4 id="响应报文格式："><a href="#响应报文格式：" class="headerlink" title="响应报文格式："></a>响应报文格式：</h4><pre><code>version     status     reason-phrase
+headers
+entity-body
+</code></pre><h3 id="报文组成："><a href="#报文组成：" class="headerlink" title="报文组成："></a>报文组成：</h3><h4 id="起始行："><a href="#起始行：" class="headerlink" title="起始行："></a>起始行：</h4><ul>
 <li>请求报文的说明了要做些什么；包含了一个方法和一个请求URL，以及http版本号。</li>
 <li><p>响应报文的说明了发生了什么；包含了http版本，数字状态码，以及原因短语。</p>
 <ol>
@@ -432,12 +434,12 @@
 <li>300-399：重定向状态码【300…】</li>
 <li>400-499：客户端错误状态码【404…】</li>
 <li>500-599：服务器错误状态码</li>
-<li><h4 id="首部："><a href="#首部：" class="headerlink" title="首部："></a>首部：</h4>名值对的列表；向请求和响应报文中添加了一些附加信息。某一首部行过长可以使用前端有空格或制表符的首部延续行。<br>分类：<br>通用首部：实现通用功能；如date<br>请求首部：请求专用<br>响应首部：响应专用<br>实体首部：描述主体的长度和内容等；或者资源本身。<br>扩展首部：扩展时用</li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
+<h4 id="首部："><a href="#首部：" class="headerlink" title="首部："></a>首部：</h4><p>名值对的列表；向请求和响应报文中添加了一些附加信息。某一首部行过长可以使用前端有空格或制表符的首部延续行。<br>分类：<br>通用首部：实现通用功能；如date<br>请求首部：请求专用<br>响应首部：响应专用<br>实体首部：描述主体的长度和内容等；或者资源本身。<br>扩展首部：扩展时用</p>
 <h4 id="实体主体："><a href="#实体主体：" class="headerlink" title="实体主体："></a>实体主体：</h4><p>可选；主要是http要传输的内容</p>
 
       
@@ -661,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP01"><span class="nav-number">1.</span> <span class="nav-text">HTTP01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络知识点补充"><span class="nav-number">1.1.</span> <span class="nav-text">计算机网络知识点补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络协议体系结构"><span class="nav-number">1.1.1.</span> <span class="nav-text">网络协议体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档类型区别"><span class="nav-number">1.1.2.</span> <span class="nav-text">文档类型区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标点击链接后"><span class="nav-number">1.1.3.</span> <span class="nav-text">鼠标点击链接后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP相关概念"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#报文组成："><span class="nav-number">1.2.1.</span> <span class="nav-text">报文组成：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#起始行："><span class="nav-number">1.2.1.1.</span> <span class="nav-text">起始行：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首部："><span class="nav-number">1.2.1.2.</span> <span class="nav-text">首部：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实体主体："><span class="nav-number">1.2.1.3.</span> <span class="nav-text">实体主体：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP01"><span class="nav-number">1.</span> <span class="nav-text">HTTP01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络知识点补充"><span class="nav-number">1.1.</span> <span class="nav-text">计算机网络知识点补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络协议体系结构"><span class="nav-number">1.1.1.</span> <span class="nav-text">网络协议体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档类型区别"><span class="nav-number">1.1.2.</span> <span class="nav-text">文档类型区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标点击链接后"><span class="nav-number">1.1.3.</span> <span class="nav-text">鼠标点击链接后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP相关概念"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#报文："><span class="nav-number">1.2.1.</span> <span class="nav-text">报文：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求报文格式："><span class="nav-number">1.2.1.1.</span> <span class="nav-text">请求报文格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应报文格式："><span class="nav-number">1.2.1.2.</span> <span class="nav-text">响应报文格式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报文组成："><span class="nav-number">1.2.2.</span> <span class="nav-text">报文组成：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#起始行："><span class="nav-number">1.2.2.1.</span> <span class="nav-text">起始行：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首部："><span class="nav-number">1.2.2.2.</span> <span class="nav-text">首部：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实体主体："><span class="nav-number">1.2.2.3.</span> <span class="nav-text">实体主体：</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
