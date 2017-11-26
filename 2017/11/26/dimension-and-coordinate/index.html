@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="w3c," />
+  <meta name="keywords" content="尺寸 坐标," />
 
 
 
@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="W3C标准包括定义w3c(World Wide Web Consortium)标准：是一些列web标准的集合，在百度上面搜索也只是告诉你w3c标准主要对应几个方面：1.结构化标准语言(xml,xhtml)2.表现标准语言(css)3.行为标准(dom,ecmascript)4.其他标准，包括字体，安全，语义化很多方面的内容。">
+<meta name="description" content="javascript中的尺寸与坐标坐标系视口：顶级窗口或标签页的视口只是实际显示文档内容的浏览器的一部分；不包括浏览器的外壳（如菜单；工具条；标签页等）。框架页中显示的文档的视口是定义了框架页的&amp;lt; iframe &amp;gt;元素；单个元素有滚动条时，内容区域是视口。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WEB语义化和W3C标准初探">
-<meta property="og:url" content="http://yoursite.com/2017/09/09/W3C-standrds/index.html">
+<meta property="og:title" content="尺寸与坐标">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/dimension-and-coordinate/index.html">
 <meta property="og:site_name" content="the blue dream">
-<meta property="og:description" content="W3C标准包括定义w3c(World Wide Web Consortium)标准：是一些列web标准的集合，在百度上面搜索也只是告诉你w3c标准主要对应几个方面：1.结构化标准语言(xml,xhtml)2.表现标准语言(css)3.行为标准(dom,ecmascript)4.其他标准，包括字体，安全，语义化很多方面的内容。">
-<meta property="og:updated_time" content="2017-09-10T00:48:49.609Z">
+<meta property="og:description" content="javascript中的尺寸与坐标坐标系视口：顶级窗口或标签页的视口只是实际显示文档内容的浏览器的一部分；不包括浏览器的外壳（如菜单；工具条；标签页等）。框架页中显示的文档的视口是定义了框架页的&amp;lt; iframe &amp;gt;元素；单个元素有滚动条时，内容区域是视口。">
+<meta property="og:updated_time" content="2017-11-26T13:22:30.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WEB语义化和W3C标准初探">
-<meta name="twitter:description" content="W3C标准包括定义w3c(World Wide Web Consortium)标准：是一些列web标准的集合，在百度上面搜索也只是告诉你w3c标准主要对应几个方面：1.结构化标准语言(xml,xhtml)2.表现标准语言(css)3.行为标准(dom,ecmascript)4.其他标准，包括字体，安全，语义化很多方面的内容。">
+<meta name="twitter:title" content="尺寸与坐标">
+<meta name="twitter:description" content="javascript中的尺寸与坐标坐标系视口：顶级窗口或标签页的视口只是实际显示文档内容的浏览器的一部分；不包括浏览器的外壳（如菜单；工具条；标签页等）。框架页中显示的文档的视口是定义了框架页的&amp;lt; iframe &amp;gt;元素；单个元素有滚动条时，内容区域是视口。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/09/W3C-standrds/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/26/dimension-and-coordinate/"/>
 
 
 
 
 
-  <title> WEB语义化和W3C标准初探 | the blue dream </title>
+  <title> 尺寸与坐标 | the blue dream </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -269,7 +269,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/W3C-standrds/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/dimension-and-coordinate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="star Huang">
@@ -290,7 +290,7 @@
             
             
               
-                WEB语义化和W3C标准初探
+                尺寸与坐标
               
             
           </h1>
@@ -305,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T22:57:28+08:00">
-                2017-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-26T20:00:17+08:00">
+                2017-11-26
               </time>
             
 
@@ -328,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端学习/" itemprop="url" rel="index">
-                    <span itemprop="name">前端学习</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -363,25 +363,22 @@
       
 
       
-        <h2 id="W3C标准包括定义"><a href="#W3C标准包括定义" class="headerlink" title="W3C标准包括定义"></a>W3C标准包括定义</h2><p>w3c(World Wide Web Consortium)标准：是一些列web标准的集合，在百度上面搜索也只是告诉你w3c标准主要对应几个方面：<br>1.结构化标准语言(xml,xhtml)<br>2.表现标准语言(css)<br>3.行为标准(dom,ecmascript)<br>4.其他标准，包括字体，安全，语义化很多方面的内容。<br><a id="more"></a></p>
+        <h1 id="javascript中的尺寸与坐标"><a href="#javascript中的尺寸与坐标" class="headerlink" title="javascript中的尺寸与坐标"></a>javascript中的尺寸与坐标</h1><h2 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h2><h3 id="视口："><a href="#视口：" class="headerlink" title="视口："></a>视口：</h3><p>顶级窗口或标签页的视口只是实际显示文档内容的浏览器的一部分；不包括浏览器的外壳（如菜单；工具条；标签页等）。框架页中显示的文档的视口是定义了框架页的&lt; iframe &gt;元素；单个元素有滚动条时，内容区域是视口。<br><a id="more"></a></p>
+<h3 id="视口坐标"><a href="#视口坐标" class="headerlink" title="视口坐标"></a>视口坐标</h3><p>有时又称窗口坐标，以视口的左上角为原点。</p>
+<h3 id="文档坐标"><a href="#文档坐标" class="headerlink" title="文档坐标"></a>文档坐标</h3><p>以显示的文档的左上角为原点。</p>
+<h3 id="坐标转换"><a href="#坐标转换" class="headerlink" title="坐标转换"></a>坐标转换</h3><p>加上或减去滚动的偏移量。</p>
+<h3 id="鼠标的视口坐标"><a href="#鼠标的视口坐标" class="headerlink" title="鼠标的视口坐标"></a>鼠标的视口坐标</h3><p>event对象：clientX；clientY</p>
 <blockquote>
-<p>W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores, that are available on any device. Although the boundaries of the platform continue to evolve, industry leaders speak nearly in unison about how HTML5 will be the cornerstone for this platform. But the full strength of the platform relies on many more technologies that W3C and its partners are creating, including CSS, SVG, WOFF, the Semantic Web stack, XML, and a variety of APIs.</p>
+<p>当文档比视口要小时（或未出现滚动）；文档左上角就是视口左上角。</p>
+<p>使用css指定元素的位置时运用了文档坐标；但最简单的查询元素的位置的方法返回的是视口坐标中的位置，鼠标事件中指针的坐标也是相对视口坐标系的。</p>
 </blockquote>
-<h2 id="具体体现"><a href="#具体体现" class="headerlink" title="具体体现"></a><a href="https://segmentfault.com/a/1190000008516458" target="_blank" rel="external">具体体现</a></h2><p>目前为止w3c标准主要分为web结构、web设备、web设计与应用、web语义化、xml技术、web服务以及浏览和创作工具7大部分。每一个部分又细分为很多小部分，如下图所示：</p>
-<h3 id="web设计和应用程序"><a href="#web设计和应用程序" class="headerlink" title="web设计和应用程序"></a>web设计和应用程序</h3><p>这部分主要是涉及到web构建和web页面渲染的一些标准, 包括html,css,svg,ajax和其他的一些web应用程序。同时也涉及到web的可访问性方面的内容。</p>
-<h3 id="web设备"><a href="#web设备" class="headerlink" title="web设备"></a>web设备</h3><p>这里主要讲互联网的应该无论何时何地都能够让任何设备访问。这包括移动电话和其他移动设备的网络访问，以及在消费电子，打印机，交互式电视，甚至汽车网络技术的使用。</p>
-<h3 id="web结构"><a href="#web结构" class="headerlink" title="web结构"></a>web结构</h3><p>web的体系结构侧重于web基础技术和维持网络的一些原则。包括uri和http。</p>
-<h3 id="web语义化"><a href="#web语义化" class="headerlink" title="web语义化"></a>web语义化</h3><p>web语义化技术使人们根据相应的规则创建词汇表，编写数据处理规则，让计算机能够做更多有用的工作。</p>
-<h3 id="xml技术"><a href="#xml技术" class="headerlink" title="xml技术"></a>xml技术</h3><p>xml技术包括xml，xml命名空间，xml schema, xslt, exi 和其他相关的标准。它是可以定义其它语言的语言，最初设计主要是弥补html设计上的不足以强大的扩展性满足网络信息发布的需要，后来逐渐用于网络数据的转换和描述。设计的初衷是为了传输和存储语言，可以用户自定义标签。</p>
-<h3 id="web服务"><a href="#web服务" class="headerlink" title="web服务"></a>web服务</h3><p>这部分的标准里面主要又定义了支付，安全和国际化方面的一些标准。</p>
-<h3 id="浏览和创作工具"><a href="#浏览和创作工具" class="headerlink" title="浏览和创作工具"></a>浏览和创作工具</h3><p>主要介绍了人可以浏览器，媒体播放器访问web，并获取相关的咨询，也可以通过博客，cms系统，社交媒体发布信息到网上。</p>
-<h2 id="常用web标准"><a href="#常用web标准" class="headerlink" title="常用web标准"></a>常用web标准</h2><p>到目前为止w3c官网总共有92个标准(细分后的)，想具体了解请访问<a href="https://www.w3.org/TR/" target="_blank" rel="external">链接</a>，按照2/8原则，常用的有10多条，分别是：<br>1.web可访问性<br>2.视频<br>3.html<br>4.css<br>5.dom<br>6.xml<br>7.图形<br>8.语义化web<br>9.http<br>10.国际化<br>11.JavaScript apis<br>12.web安全<br>13.web字体<br>14.svg<br>15.音频<br>16.web性能<br>17.xhtml</p>
-<h2 id="什么是web语义化"><a href="#什么是web语义化" class="headerlink" title="什么是web语义化"></a>什么是web语义化</h2><blockquote>
-<p>语义的概念： 可以简单地看作是数据所对应的现实世界中的事物所代表的概念的含义，以及这些含义之间的关系，是数据在某个领域上的解释和逻辑表示。—百度百科</p>
-</blockquote>
-<p><strong>web语义化</strong>： 对于HTML体系而言，Web语义化是指使用语义恰当的标签，使页面有良好的结构，页面元素有含义，能够让人和机器都容易理解。对CSS体系而言，</p>
-<h2 id="web语义化具体体现"><a href="#web语义化具体体现" class="headerlink" title="web语义化具体体现"></a>web语义化具体体现</h2><p>1.合理使用语义元素构建具有良好结构的页面；比如用hx标签组来表示不同的标题，用strong标签来表示强调。<br>2.合理使用CSS的class和id对元素进行修饰；比如left-bar，red-text等都有利于增强标签的语义。</p>
-<h2 id="web语义化的好处"><a href="#web语义化的好处" class="headerlink" title="web语义化的好处"></a>web语义化的好处</h2><p>1.去掉或样式丢失的时候能让页面呈现清晰的结构：<br>2.屏幕阅读器（如果访客有视障）会完全根据你的标记来“读”你的网页<br>3.PDA、手机等设备可能无法像pc端的浏览器一样来渲染网页（通常它们对CSS的支持较弱）.<br>4.搜索引擎的爬虫也依赖于标记来确定上下文和各个关键字的权重.你的页面是否对爬虫容易理解非常重要,因为爬虫很大程度上会忽略用于表现的标记,而只注重语义标记.<br>5.减少开发中的差异化，便于团队开发和维护.</p>
+<h2 id="位置与尺寸"><a href="#位置与尺寸" class="headerlink" title="位置与尺寸"></a>位置与尺寸</h2><h3 id="浏览器窗口滚动条"><a href="#浏览器窗口滚动条" class="headerlink" title="浏览器窗口滚动条"></a>浏览器窗口滚动条</h3><h4 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h4><p>window对象：pageXOffset+pageYOffset【在ie8-中：scrollLeft+scrollTop ；正常情况下，通过查询文档根节点：document.documentElement获取；怪异模式下：查询document.body获取。】</p>
+<h4 id="位置赋值"><a href="#位置赋值" class="headerlink" title="位置赋值"></a>位置赋值</h4><p>window对象：scrollTo(文档x,文档y)方法用于设置窗口的滚动偏移量；scrollBy(x，y)方法在当前滚动偏移量的基础上增加偏移量。</p>
+<h4 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h4><p>scrollWidth和scrollHeight是元素的内容区域加上它的内边距在加上任何溢出内容的尺寸。</p>
+<h3 id="浏览器窗口视口尺寸"><a href="#浏览器窗口视口尺寸" class="headerlink" title="浏览器窗口视口尺寸"></a>浏览器窗口视口尺寸</h3><p>window对象：innerWidth+innerHeight【在ie8-中：clientWidth+clientHeight ；正常情况下：通过查询文档根节点：document.documentElement获取；怪异模式下：查询document.body获取。】</p>
+<h3 id="浏览器屏幕窗口尺寸"><a href="#浏览器屏幕窗口尺寸" class="headerlink" title="浏览器屏幕窗口尺寸"></a>浏览器屏幕窗口尺寸</h3><p>window对象的screen对象属性：width+height指以像素为单位的窗口大小；availWidth+availHeight指实际可用的显示大小，它排除了桌面任务栏这样的特性所占有的空间。</p>
+<h3 id="元素尺寸：（视口坐标）"><a href="#元素尺寸：（视口坐标）" class="headerlink" title="元素尺寸：（视口坐标）"></a>元素尺寸：（视口坐标）</h3><p>1.　元素有getBoundingClientRect()方法：返回有trbl属性的对象；其中top和left表示元素左上角坐标，bottom和right表示元素右下角坐标。【非ie中：有width和height属性。ie中：width = right-left；height=bottom-top】【包含边框与内边距；不含外边距。】<br>内联元素有getClientRects()方法：查询独立的矩形。【都是非实时的】<br>2.　任何html元素的只读属性offsetWidth和offsetHeight以css像素返回其尺寸【包含边框与内边距；不含外边距。】；offsetTop和offsetLeft一般返回元素文档坐标（即若offsetParent为null）；对已定位元素的后代元素或一些其他元素，返回相对祖先元素的坐标。【clientWidth和clientHeight类似offsetWidth和offsetHeight，但不包含边框，只包含内容和内边距。】</p>
+<h2 id="判定某点的元素："><a href="#判定某点的元素：" class="headerlink" title="判定某点的元素："></a>判定某点的元素：</h2><p>1.　document对象的elementFromPoint(视口X,视口Y)方法；显示该点最里面和最上面的元素。<br>2.　鼠标事件对象的target属性包含了相关信息。</p>
 
       
     </div>
@@ -416,7 +413,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/w3c/" rel="tag"># w3c</a>
+            <a href="/tags/尺寸-坐标/" rel="tag"># 尺寸 坐标</a>
           
         </div>
       
@@ -429,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/28/different-browser-kernel/" rel="next" title="different browser kernel">
-                <i class="fa fa-chevron-left"></i> different browser kernel
+              <a href="/2017/11/19/http-01/" rel="next" title="HTTP权威指南笔记01">
+                <i class="fa fa-chevron-left"></i> HTTP权威指南笔记01
               </a>
             
           </div>
@@ -438,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/10/css-cascading-and-inherit/" rel="prev" title="css的层叠与继承">
-                css的层叠与继承 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -608,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#W3C标准包括定义"><span class="nav-number">1.</span> <span class="nav-text">W3C标准包括定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体体现"><span class="nav-number">2.</span> <span class="nav-text">具体体现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#web设计和应用程序"><span class="nav-number">2.1.</span> <span class="nav-text">web设计和应用程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web设备"><span class="nav-number">2.2.</span> <span class="nav-text">web设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web结构"><span class="nav-number">2.3.</span> <span class="nav-text">web结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web语义化"><span class="nav-number">2.4.</span> <span class="nav-text">web语义化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xml技术"><span class="nav-number">2.5.</span> <span class="nav-text">xml技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web服务"><span class="nav-number">2.6.</span> <span class="nav-text">web服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览和创作工具"><span class="nav-number">2.7.</span> <span class="nav-text">浏览和创作工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用web标准"><span class="nav-number">3.</span> <span class="nav-text">常用web标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是web语义化"><span class="nav-number">4.</span> <span class="nav-text">什么是web语义化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web语义化具体体现"><span class="nav-number">5.</span> <span class="nav-text">web语义化具体体现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web语义化的好处"><span class="nav-number">6.</span> <span class="nav-text">web语义化的好处</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript中的尺寸与坐标"><span class="nav-number">1.</span> <span class="nav-text">javascript中的尺寸与坐标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标系"><span class="nav-number">1.1.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视口："><span class="nav-number">1.1.1.</span> <span class="nav-text">视口：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视口坐标"><span class="nav-number">1.1.2.</span> <span class="nav-text">视口坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档坐标"><span class="nav-number">1.1.3.</span> <span class="nav-text">文档坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坐标转换"><span class="nav-number">1.1.4.</span> <span class="nav-text">坐标转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标的视口坐标"><span class="nav-number">1.1.5.</span> <span class="nav-text">鼠标的视口坐标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置与尺寸"><span class="nav-number">1.2.</span> <span class="nav-text">位置与尺寸</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器窗口滚动条"><span class="nav-number">1.2.1.</span> <span class="nav-text">浏览器窗口滚动条</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#位置"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位置赋值"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">位置赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#尺寸"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">尺寸</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器窗口视口尺寸"><span class="nav-number">1.2.2.</span> <span class="nav-text">浏览器窗口视口尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器屏幕窗口尺寸"><span class="nav-number">1.2.3.</span> <span class="nav-text">浏览器屏幕窗口尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素尺寸：（视口坐标）"><span class="nav-number">1.2.4.</span> <span class="nav-text">元素尺寸：（视口坐标）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判定某点的元素："><span class="nav-number">1.3.</span> <span class="nav-text">判定某点的元素：</span></a></li></ol></li></ol></div>
             
 
           </div>
